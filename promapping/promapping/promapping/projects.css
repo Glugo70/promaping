@@ -1,0 +1,129 @@
+.project p {
+    font-size: 150%; /* Double the font size */
+}
+
+.hover {
+    min-height: 100vh;
+    width: 100%; /* Adjusted width to fit the viewport */
+    background-color: #fff;
+    background-image: url(https://i.gifer.com/embedded/download/5UHm.gif); /* Background image */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40%; /* Changed background-size to cover */
+   
+    padding: 20 10%;
+}
+/* Define @font-face rule for moonhouse font */
+@font-face {
+    font-family: 'conthrax-sb';
+    src: url('D:/promapping/fonts/conthrax-sb.otf') format('opentype');
+    /* Additional font properties like font-weight and font-style can be specified here */
+}
+
+@font-face {
+    font-family: 'coure';
+    src: url('D:/promapping/fonts/coure.woff') format('woff');
+    /* Add other font properties like font-weight and font-style if needed */
+}
+
+/* Background animation for the header */
+header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-family: 'moonhouse', sans-serif;
+    background-image: linear-gradient(to bottom, #1b2735, #090e11);
+    animation: backgroundAnimation 10s infinite linear;
+}
+
+/* Fade-in animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to body */
+body {
+    opacity: 0; /* Initially hide the body */
+    animation: fadeInAnimation 1s ease-in-out forwards; /* Apply animation */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+h1 {
+    font-size: 84px;
+}
+
+/* Additional styles for navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px; /* Apply font size to all navigation links */
+}
+
+nav ul li a:hover {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Height of the overlay bar */
+    background-color: #161EF3; /* Color of the overlay bar */
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform-origin: bottom right; /* Scaling from bottom right */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    transform-origin: bottom left; /* Scaling from bottom left */
+}
+
+/* Make text look crisper and more legible in all browsers */
+body, h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'moonhouse', sans-serif; /* Apply moonhouse font family */
+}
+
+
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+}

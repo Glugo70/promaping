@@ -1,0 +1,178 @@
+a.external-link {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link text bold */
+}
+
+a.external-link:hover {
+    color: #0056b3; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style external links */
+a.external-link {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 1px dotted #007bff; /* Add bottom border */
+}
+
+a.external-link:hover {
+    color: #0056b3; /* Change color on hover */
+    border-bottom-color: #0056b3; /* Change border color on hover */
+}
+
+#learning-path {
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+#learning-path p {
+    max-width: 600px; /* Limit the width of paragraphs for better readability */
+    margin: 0 auto 20px; /* Center paragraphs and add some bottom margin */
+}
+
+#learning-path ol {
+    max-width: 600px; /* Limit the width of the ordered list */
+    margin: 0 auto; /* Center the ordered list */
+}
+
+#learning-path li {
+    margin-bottom: 10px; /* Add some bottom margin to each list item */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Define @font-face rule for moonhouse font */
+@font-face {
+    font-family: 'conthrax-sb';
+    src: url('D:/promapping/fonts/conthrax-sb.otf') format('opentype');
+    /* Additional font properties like font-weight and font-style can be specified here */
+}
+
+@font-face {
+    font-family: 'coure';
+    src: url('D:/promapping/fonts/coure.woff') format('woff');
+    /* Add other font properties like font-weight and font-style if needed */
+}
+
+/* Background animation for the header */
+header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-family: 'moonhouse', sans-serif;
+    background-image: linear-gradient(to bottom, #1b2735, #090e11);
+    animation: backgroundAnimation 10s infinite linear;
+}
+
+/* Fade-in animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to body */
+body {
+    opacity: 0; /* Initially hide the body */
+    animation: fadeInAnimation 1s ease-in-out forwards; /* Apply animation */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+h1 {
+    font-size: 84px;
+}
+
+/* Additional styles for navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px; /* Apply font size to all navigation links */
+}
+
+nav ul li a:hover {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Height of the overlay bar */
+    background-color: #161EF3; /* Color of the overlay bar */
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform-origin: bottom right; /* Scaling from bottom right */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    transform-origin: bottom left; /* Scaling from bottom left */
+}
+
+/* Make text look crisper and more legible in all browsers */
+body, h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'moonhouse', sans-serif; /* Apply moonhouse font family */
+}
+
+/* Apply moonhouse font to .hover section */
+.hover {
+    min-height: 100vh;
+    width: 100%; /* Adjusted width to fit the viewport */
+    background-color: #efee;
+    background-image: url(https://25.media.tumblr.com/72d5855e55a1971645b927c14debc7ce/tumblr_mtjget4P4m1ru39xmo1_500.gif); /* Background image */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 30%; /* Changed background-size to cover */
+     background-attachment: fixed;
+   
+    padding: 0px 0%; /* Added 'px' unit to padding */
+}
+}
+
+#main {
+    flex: 1; /* Fill remaining space */
+    padding-bottom: 100px; /* Add space between main content and footer */
+    padding-left: 100%; /* Adjusted padding to move content more to the right */
+}
+}
+{
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto; /* Push footer to the bottom */
+}

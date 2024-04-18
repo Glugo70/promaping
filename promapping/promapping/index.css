@@ -1,0 +1,235 @@
+.hover {
+    min-height: 100vh;
+    width: 100%; /* Adjusted width to fit the viewport */
+    background-color: #fff;
+    background-image: url('images/walkingman.gif'); /* Background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20%; /* Changed background-size to cover */
+   
+    padding: 10 8%;
+}
+
+
+/* Define @font-face rule for moonhouse font */
+
+./* Fade-in animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* Apply fade-in animation to body */
+body {
+    opacity: 0; /* Initially hide the body */
+    animation: fadeInAnimation 1s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Your existing CSS styles */
+   
+/* Define a class for Courier Regular font */
+.courier-regular {
+    font-family: 'Courier New', Courier, monospace;
+    /* You can add additional styling here if needed */
+}
+
+/* More of your existing CSS styles */
+
+body, h1, p {
+    font-family: 'coure', sans-serif;
+}
+.rectangular-paragraph {
+    word-wrap: break-word;
+    line-height: 1.5em; /* Adjust line height to control the height of each row */
+    font-size: 23px;
+    width: 350px; /* Adjust the width as needed */
+}
+
+.rectangular-paragraph::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* Make text look crisper and more legible in all browsers */
+body, h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'moonhouse', sans-serif; /* Apply moonhouse font family */
+	header h1 {
+    font-size: 100px; /* Adjust the font size as needed */
+}
+    }
+
+/* Additional CSS styles */
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off, .grid-base {
+    pointer-events: none;
+}
+
+/* Enables all click and hover interaction with an element */
+.pointer-events-on, .grid-cell {
+    pointer-events: auto;
+}
+
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    
+}
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/*
+Make the following elements inherit typography styles from the parent and not have hardcoded values.
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+}
+*/
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Style for horizontal navigation menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 23px; /* Apply font size to all navigation links */
+    
+}
+
+nav ul li a:hover {
+
+}
+
+/* Overlay bar style */
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Height of the overlay bar */
+    background-color: #161EF3; /* Color of the overlay bar */
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform-origin: bottom right; /* Scaling from bottom right */
+}
+
+/* Bar scaling on hover */
+nav ul li:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    transform-origin: bottom left; /* Scaling from bottom left */
+}
+
+/* Change header font color to white */
+header {
+    color: white;
+}
+
+/* Styles for body, main content, and footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the height of the viewport */
+    margin: 0;
+}
+
+#main {
+    flex: 1; /* Fill remaining space */
+    padding-bottom: 100px; /* Add space between main content and footer */
+    padding-left: 15%; /* Adjusted padding to move content more to the right */
+}
+}
+{
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-content {
+    /* Your footer content styles here */
+}
+
+.footer-bottom {
+    /* Your footer bottom styles here */
+}
+

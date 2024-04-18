@@ -1,0 +1,136 @@
+.hover {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    background-image: url(https://i.pinimg.com/originals/1b/c5/53/1bc553d11711489d45382f86f341932f.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-attachment: fixed; /* Set background attachment to fixed */
+    padding: 0px 0%;
+}.hover {
+    min-height: 100vh;
+    width: 100%; /* Adjusted width to fit the viewport */
+    background-color: #fff;
+    background-image: url(https://i.pinimg.com/originals/1b/c5/53/1bc553d11711489d45382f86f341932f.gif); /* Background image */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 30%; /* Changed background-size to cover */
+   
+    padding: 0px 0%; /* Added 'px' unit to padding */
+}
+/* General styles */
+
+/* Apply moonhouse font to body and header */
+body, header {
+    font-family: 'moonhouse', sans-serif;
+}
+
+/* Define a class for Courier Regular font */
+.courier-regular {
+    font-family: 'Courier New', Courier, monospace;
+    /* You can add additional styling here if needed */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px; /* Add some space below the header */
+}
+
+header h1 {
+    font-size: 100px;
+    border: 3px solid #161EF3;
+    padding: 20px;
+    color: #161EF3; /* Change header text color to dark blue */
+}
+
+header h2 {
+    font-size: 40px; /* Adjust the font size as needed */
+    margin-top: 20px; /* Add some space above the heading */
+}
+
+/* Navigation styles */
+nav {
+    margin-bottom: 10px; /* Reduce the space below the navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 23px; /* Apply font size to all navigation links */
+}
+
+nav ul li a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Overlay bar style */
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Height of the overlay bar */
+    background-color: #161EF3; /* Color of the overlay bar */
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform-origin: bottom right; /* Scaling from bottom right */
+}
+
+/* Bar scaling on hover */
+nav ul li:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    transform-origin: bottom left; /* Scaling from bottom left */
+}
+
+/* Tutorial section styles */
+section {
+    margin-bottom: 30px; /* Add some space below the section */
+}
+
+section h2 {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+section p {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Adjust the line height as needed */
+}
+
+section ul {
+    margin-top: 10px; /* Add some space above the list */
+}
+
+/* Apply fade-in animation to body */
+body {
+    opacity: 0; /* Initially hide the body */
+    animation: fadeInAnimation 1s ease-in-out forwards; /* Apply animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
